@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View, Button, ScrollView, SafeAreaView, StatusBar } from 'react-native';
 import React, {useEffect, useState} from 'react';
+
 import Card from './componentes/card'
+
 
 export default function App() {
   const [dataImported, constructData] = useState('');
@@ -47,6 +49,7 @@ export default function App() {
       <SafeAreaView style={styles.safeAreaCards}>
         <ScrollView contentContainerStyle={styles.contentContainerCards} style={styles.containerCards}>
           {dataImported}
+          {/* <Card title="un Título" vol="10101010" opDay="10123421"></Card> */}
         </ScrollView>
       </SafeAreaView>
       
@@ -55,7 +58,7 @@ export default function App() {
           style={styles.buttonReload}
           onPress={importData}
           title="Reload"
-          color="#ffbe00"
+          color="#664EFF"
           accessibilityLabel="Reload data"
         />
       </View>
@@ -66,7 +69,7 @@ export default function App() {
 const styles = StyleSheet.create({
   containerView: {
     flex: 1,
-    backgroundColor: "#393939",
+    backgroundColor: "#1F1B2E",
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -77,19 +80,23 @@ const styles = StyleSheet.create({
     height: 60,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#1c1c1c",
+    backgroundColor: "#1F1B2E",
     borderEndEndRadius: 10,
     borderEndStartRadius: 10
   },
   appTitle:{
     color: "white",
     fontSize: 30,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    color: "#664EFF",
+    textShadowColor:"#664EFF",
+    textShadowOffset: {width: 0, height:0},
+    textShadowRadius: 15
   },
   safeAreaCards:{
     alignItems: "center",
     paddingTop: 30,
-    backgroundColor: "#141414",
+    backgroundColor: "#2b214d",
     width: "90%",
     height: 600,
     borderRadius: 30,
