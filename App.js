@@ -20,13 +20,11 @@ export default function App() {
       console.log(data)
       let cards = [];
       if(Array.isArray(data)){
-        console.log("algo1")
         data.forEach(element => {
-          console.log("algo2")
-          cards.push(<Card title={element.exchange_id} vol={element.volume_1hrs_usd} opDay={element.volume_1day_usd}></Card>)
+          cards.push(<Card title={element.name} vol={element.volume_1hrs_usd} opDay={element.volume_1day_usd}></Card>)
         });
       }else{
-        cards.push(<Card title={data.exchange_id} vol={data.volume_1hrs_usd} opDay={data.volume_1day_usd}></Card>)
+        cards.push(<Card title={data.name} vol={data.volume_1hrs_usd} opDay={data.volume_1day_usd}></Card>)
       }
       constructData(cards);
     })

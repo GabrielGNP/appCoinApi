@@ -3,7 +3,7 @@ export default function Card({title, vol, opDay}) {
 
     return (
         <View style={styles.card}>
-            <View style={styles.Logo}>$</View>
+            <Text style={styles.Logo}>$</Text>
             <View style={{width:"100%", alignItems:"flex-end"}}>
                 {title != null ? (
                     <Text style={styles.title}>{title}</Text>
@@ -37,22 +37,25 @@ const styles = StyleSheet.create({
     card: {
         width: "95%",
         borderWidth: 3,
-        padding: "5px",
+        padding: 5,
         borderRadius: 10,
         borderColor: "#664EFF",
         margin: 5,
         marginBottom: 30,
         backgroundColor: "#332687",
-        shadowColor: "#392d83",
+        shadowColor: "#664EFF",
         shadowRadius: 5,
         shadowOffset: {width: 5, height: 5},
+        shadowOpacity: 1,
+        elevation: 16,
     },
     Logo:{
         height: 40,
         width: 40,
         position: "absolute",
+        top: 5,
         left: 5,
-        borderRadius: "100%",
+        borderRadius: 300,
         backgroundColor:"#664EFF",
         textAlign: "center",
         justifyContent: "center",
@@ -69,8 +72,7 @@ const styles = StyleSheet.create({
         padding: 5,
         width: "50%",
         borderRadius: 10,
-        right: "0%",
-        
+        right: "0%",    
     },
     rowInfo:{
       display: "flex",
